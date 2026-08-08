@@ -16,14 +16,21 @@ export interface ProfileConfig {
   }[];
 }
 
+export interface AnnouncementConfig {
+  enabled?: boolean;
+  badge?: string;
+  title: string;
+  description: string;
+  date?: string;
+  icon?: string;
+  link?: string;
+}
+
 export interface HomeConfig {
   tagline: string;
   bioParagraphs: string[];
-  highlightBadge?: {
-    title: string;
-    description: string;
-    icon?: string;
-  } | null;
+  announcement?: AnnouncementConfig | null;
+  highlightBadge?: AnnouncementConfig | null;
 }
 
 export interface ResearchCategory {

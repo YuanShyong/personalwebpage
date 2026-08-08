@@ -4,10 +4,10 @@ import { FormattedMathText } from './KatexMath';
 
 interface PublicationsTabProps {
   publications: Publication[];
-  onOpenInspector: () => void;
+  onOpenInspector?: () => void;
 }
 
-export const PublicationsTab: React.FC<PublicationsTabProps> = ({ publications, onOpenInspector }) => {
+export const PublicationsTab: React.FC<PublicationsTabProps> = ({ publications }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [activeBibtex, setActiveBibtex] = useState<string | null>(null);
@@ -52,18 +52,10 @@ export const PublicationsTab: React.FC<PublicationsTabProps> = ({ publications, 
                 Publications & Preprints
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1 font-sans">
-                Peer-reviewed journal articles and research preprints in geometric analysis. Managed in <code className="text-emerald-300 font-mono">research.config.js</code>.
+                Peer-reviewed journal articles and research preprints in geometric analysis.
               </p>
             </div>
           </div>
-
-          <button
-            onClick={onOpenInspector}
-            className="self-start sm:self-auto px-3 py-1.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold uppercase font-mono rounded text-xs cursor-pointer transition flex items-center gap-1.5 shadow shrink-0"
-          >
-            <i className="fa-solid fa-code"></i>
-            <span>View research.config.js</span>
-          </button>
         </div>
 
         {/* Search Input & Tags */}

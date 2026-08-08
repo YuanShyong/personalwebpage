@@ -22,18 +22,22 @@ export const siteConfig: SiteConfigData = {
 
   home: {
     tagline: "Assistant Professor in Differential Geometry & Geometric Analysis at National University of Tainan.",
+    announcement: {
+      enabled: true,
+      badge: "NEW POSITION STARTING FALL 2026",
+      title: "Assistant Professor at National University of Tainan (NUTN)",
+      description: "Dr. Yuan Shyong Ooi will be joining the Department of Applied Mathematics at National University of Tainan (國立臺南大學) starting Fall 2026.",
+      date: "Fall 2026",
+      icon: "fa-solid fa-bullhorn",
+      link: ""
+    },
     bioParagraphs: [
       "My family name is Ooi, and Yuan Shyong is my given name. Starting Fall 2026, I am an Assistant Professor in the Department of Applied Mathematics at the National University of Tainan (國立臺南大學).",
       "My research interests lie in differential geometry and geometric analysis, with a particular focus on minimal submanifolds, mean curvature flow, and geometric partial differential equations. Driven by a passion for uncovering mathematical truths, I am dedicated to advancing both research and education in these fields.",
       "Born and raised in Malaysia, I completed my Bachelor's degree at the University of Science, Malaysia (USM). I then moved to Taiwan, where I earned both my M.Sc. and Ph.D. from National Taiwan University (NTU) under the supervision of Professor Yng-Ing Lee (李瑩英).",
       "Prior to joining NUTN, I gained extensive research experience through several postdoctoral appointments including National Center for Theoretical Sciences (NCTS, 2024–2026), Basic Research Laboratory at Pusan National University (PNU, 2021–2024 hosted by Prof. Juncheol Pyo), and National Taiwan University (2020–2021).",
       "When I'm not doing math, I'm usually playing strategy board games—which turns out to be just more math in disguise! Feel free to find me on Board Game Arena (BGA) or try my custom 3D Tetris game."
-    ],
-    highlightBadge: {
-      title: "New Position starting Fall 2026",
-      description: "Assistant Professor at National University of Tainan (NUTN), Department of Applied Mathematics.",
-      icon: "fa-solid fa-bullhorn"
-    }
+    ]
   },
 
   contact: {

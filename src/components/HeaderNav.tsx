@@ -5,7 +5,7 @@ interface HeaderNavProps {
   profile: ProfileConfig;
   activeTab: string;
   setActiveTab: (tab: string) => void;
-  onOpenConfigInspector: () => void;
+  onOpenConfigInspector?: () => void;
   onTriggerExplosion?: () => void;
 }
 
@@ -69,15 +69,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
 
         {/* Right Tools & Active Node Simulation Status */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={onOpenConfigInspector}
-            className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 bg-slate-900 hover:bg-slate-800 text-emerald-400 hover:text-emerald-300 border border-slate-800 rounded font-mono text-xs transition cursor-pointer"
-            title="View research.config.js & teaching.config.js"
-          >
-            <i className="fa-brands fa-github text-xs"></i>
-            <span>Configs</span>
-          </button>
-
           <div className="text-right flex flex-col items-end">
             <button
               onClick={onTriggerExplosion}

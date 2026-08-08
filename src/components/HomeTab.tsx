@@ -9,8 +9,53 @@ interface HomeTabProps {
 }
 
 export const HomeTab: React.FC<HomeTabProps> = ({ home, onNavigateTab, onExplode }) => {
+  const ann = home.announcement || home.highlightBadge;
+  const isAnnEnabled = home.announcement ? home.announcement.enabled !== false : !!home.highlightBadge;
+
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
+      {/* Featured Announcement Banner */}
+      {ann && isAnnEnabled && (
+        <section className="bg-slate-950/90 border-l-4 border-l-emerald-400 border border-emerald-500/30 rounded-xl p-5 sm:p-6 shadow-xl backdrop-blur-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start sm:items-center gap-3.5">
+            <div className="p-3 bg-emerald-400/10 text-emerald-400 rounded-xl shrink-0 mt-0.5 sm:mt-0">
+              <i className={`${ann.icon || 'fa-solid fa-bullhorn'} text-xl`}></i>
+            </div>
+            <div className="space-y-1">
+              <div className="flex flex-wrap items-center gap-2">
+                {ann.badge && (
+                  <span className="bg-emerald-400 text-slate-950 px-2.5 py-0.5 text-[11px] font-extrabold font-mono uppercase tracking-wider rounded">
+                    {ann.badge}
+                  </span>
+                )}
+                {ann.date && (
+                  <span className="text-xs font-mono text-emerald-400 font-semibold">
+                    [{ann.date}]
+                  </span>
+                )}
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white font-mono">
+                {ann.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+                {ann.description}
+              </p>
+            </div>
+          </div>
+          {ann.link && (
+            <a
+              href={ann.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 px-4 py-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold uppercase font-mono rounded text-xs transition cursor-pointer flex items-center gap-1.5 shadow"
+            >
+              <span>Details</span>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          )}
+        </section>
+      )}
+
       {/* 01 About Section */}
       <section className="bg-slate-950/80 border-l-2 border-emerald-500/40 border-y border-r border-slate-800/80 rounded-xl p-6 sm:p-8 shadow-xl backdrop-blur-md space-y-4">
         <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
@@ -22,9 +67,6 @@ export const HomeTab: React.FC<HomeTabProps> = ({ home, onNavigateTab, onExplode
               Biography & Profile
             </h2>
           </div>
-          <code className="hidden sm:inline-block text-[10px] bg-slate-900 p-1.5 border border-slate-800 text-slate-500 font-mono">
-            Source: site.config.js
-          </code>
         </div>
 
         <p className="text-base sm:text-lg font-mono text-emerald-400/90 leading-relaxed italic">
@@ -38,23 +80,6 @@ export const HomeTab: React.FC<HomeTabProps> = ({ home, onNavigateTab, onExplode
             </p>
           ))}
         </div>
-
-        {/* Highlight Badge */}
-        {home.highlightBadge && (
-          <div className="mt-4 p-4 rounded-xl bg-slate-900 border-l-2 border-l-emerald-400 border border-slate-800 flex items-start gap-3.5 text-slate-200">
-            <div className="p-2 bg-emerald-400/10 rounded-lg text-emerald-400 shrink-0">
-              <i className={`fa-solid ${home.highlightBadge.icon || 'fa-award'} text-lg`}></i>
-            </div>
-            <div>
-              <div className="font-bold text-sm sm:text-base text-white font-mono uppercase">
-                {home.highlightBadge.title}
-              </div>
-              <div className="text-xs sm:text-sm text-slate-400 mt-0.5">
-                {home.highlightBadge.description}
-              </div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* 02 Interactive Simulation Box */}
@@ -116,11 +141,6 @@ export const HomeTab: React.FC<HomeTabProps> = ({ home, onNavigateTab, onExplode
               ))}
             </div>
           </div>
-          <div className="mt-6 pt-3 border-t border-slate-800/60">
-            <code className="text-[10px] bg-slate-900 p-1.5 border border-slate-800 text-slate-500 font-mono">
-              Source: research_config.json
-            </code>
-          </div>
         </section>
 
         {/* Teaching Overview */}
@@ -151,11 +171,6 @@ export const HomeTab: React.FC<HomeTabProps> = ({ home, onNavigateTab, onExplode
                 </span>
               ))}
             </div>
-          </div>
-          <div className="mt-6 pt-3 border-t border-slate-800/60">
-            <code className="text-[10px] bg-slate-900 p-1.5 border border-slate-800 text-slate-500 font-mono">
-              Source: teaching_config.json
-            </code>
           </div>
         </section>
       </div>

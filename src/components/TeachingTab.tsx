@@ -4,10 +4,10 @@ import { FormattedMathText } from './KatexMath';
 
 interface TeachingTabProps {
   data: TeachingConfigData;
-  onOpenInspector: () => void;
+  onOpenInspector?: () => void;
 }
 
-export const TeachingTab: React.FC<TeachingTabProps> = ({ data, onOpenInspector }) => {
+export const TeachingTab: React.FC<TeachingTabProps> = ({ data }) => {
   const [talkFilter, setTalkFilter] = useState<'all' | 'upcoming' | 'past'>('all');
 
   const filteredTalks = data.talks.filter((t) => {
@@ -18,28 +18,6 @@ export const TeachingTab: React.FC<TeachingTabProps> = ({ data, onOpenInspector 
 
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
-      {/* Separated Config Banner Notification */}
-      <div className="bg-slate-950/90 border-l-4 border-l-emerald-400 border border-emerald-500/30 rounded-xl p-4 sm:p-5 shadow-xl backdrop-blur-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm">
-        <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-400/20 text-emerald-400 rounded-lg shrink-0">
-            <i className="fa-solid fa-chalkboard-user text-lg"></i>
-          </div>
-          <div>
-            <span className="font-bold text-white uppercase font-mono">Separated Configuration File:</span>
-            <span className="text-slate-300 ml-1">
-              All courses, teaching records, and talks are managed separately in <code className="text-emerald-300 bg-slate-900 px-1.5 py-0.5 rounded border border-emerald-500/30 font-mono">teaching.config.js</code>.
-            </span>
-          </div>
-        </div>
-        <button
-          onClick={onOpenInspector}
-          className="shrink-0 px-3 py-1.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold uppercase font-mono rounded text-xs cursor-pointer transition flex items-center gap-1.5 shadow"
-        >
-          <i className="fa-solid fa-code"></i>
-          <span>View teaching.config.js</span>
-        </button>
-      </div>
-
       {/* 01 Teaching Philosophy */}
       <section className="bg-slate-950/80 border-l-2 border-emerald-500/40 border-y border-r border-slate-800/80 rounded-xl p-6 sm:p-8 shadow-xl backdrop-blur-md space-y-4">
         <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
@@ -51,9 +29,6 @@ export const TeachingTab: React.FC<TeachingTabProps> = ({ data, onOpenInspector 
               Teaching Philosophy
             </h2>
           </div>
-          <code className="hidden sm:inline-block text-[10px] bg-slate-900 p-1.5 border border-slate-800 text-slate-500 font-mono">
-            Source: teaching.config.js
-          </code>
         </div>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
           {data.teachingStatement}

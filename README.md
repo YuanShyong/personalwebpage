@@ -10,8 +10,20 @@ This website is built with **React, Vite, Tailwind CSS, and KaTeX** for renderin
 
 You do **not** need to touch any complex React or HTML code! All content on the website is controlled by **3 easy-to-read configuration files** in the root of your repository:
 
-### 1. General Profile & Contact Info: `site.config.js`
+### 1. General Profile, Announcements & Contact Info: `site.config.js`
 Edit this file to update:
+- **Announcements & Important Updates**: Edit the `announcement` section to post new position updates, call for papers, or conference news directly on your homepage:
+  ```javascript
+  announcement: {
+    enabled: true, // set to false when you want to hide the announcement
+    badge: "NEW POSITION STARTING FALL 2026",
+    title: "Assistant Professor at National University of Tainan (NUTN)",
+    description: "Dr. Yuan Shyong Ooi will be joining the Department of Applied Mathematics at National University of Tainan starting Fall 2026.",
+    date: "Fall 2026",
+    icon: "fa-solid fa-bullhorn",
+    link: "" // optional link to job announcement, paper, or news
+  },
+  ```
 - **Profile Name, Title, Institution, and Email addresses**
 - **Profile Picture** (`avatarImage`)
 - **Bio Paragraphs** (about your career, education, and interests)
@@ -21,7 +33,6 @@ Edit this file to update:
 ### 2. Research & Publications: `research.config.js`
 Edit this file to update:
 - **Research Statement**
-- **Key Mathematical Objects & Equations** (supports LaTeX formulas like `$\nabla u$`, `$\mathbf{H}=0$`)
 - **Research Themes & Problem Areas**
 - **Co-Authors & Collaborators**
 - **Publications & Preprints List** (Titles, Journals, arXiv IDs, Year, Tags, Abstracts, and PDFs)

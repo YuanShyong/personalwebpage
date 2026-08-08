@@ -12,16 +12,9 @@ import { PublicationsTab } from './components/PublicationsTab';
 import { TeachingTab } from './components/TeachingTab';
 import { MiscTab } from './components/MiscTab';
 import { ContactTab } from './components/ContactTab';
-import { ConfigEditorModal } from './components/ConfigEditorModal';
-
-// Raw JS string representation for the code viewer modal
-import rawResearchJs from '../research.config.js?raw';
-import rawTeachingJs from '../teaching.config.js?raw';
-import rawSiteJs from '../site.config.js?raw';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
-  const [isInspectorOpen, setIsInspectorOpen] = useState<boolean>(false);
   const [explodeTrigger, setExplodeTrigger] = useState<number>(0);
 
   const handleTriggerExplosion = () => {
@@ -41,7 +34,6 @@ export default function App() {
         profile={siteConfig.profile}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        onOpenConfigInspector={() => setIsInspectorOpen(true)}
         onTriggerExplosion={handleTriggerExplosion}
       />
 
@@ -66,21 +58,18 @@ export default function App() {
           {activeTab === 'research' && (
             <ResearchTab
               data={researchConfig}
-              onOpenInspector={() => setIsInspectorOpen(true)}
             />
           )}
 
           {activeTab === 'publications' && (
             <PublicationsTab
               publications={researchConfig.publications}
-              onOpenInspector={() => setIsInspectorOpen(true)}
             />
           )}
 
           {activeTab === 'teaching' && (
             <TeachingTab
               data={teachingConfig}
-              onOpenInspector={() => setIsInspectorOpen(true)}
             />
           )}
 
@@ -101,26 +90,10 @@ export default function App() {
           <div className="flex flex-wrap items-center justify-center gap-3 text-[11px] text-slate-500">
             <span>{siteConfig.profile.institution}</span>
             <span>•</span>
-            <button
-              onClick={() => setIsInspectorOpen(true)}
-              className="text-blue-400 hover:text-blue-300 underline font-mono cursor-pointer"
-            >
-              Separated research.config.js & teaching.config.js
-            </button>
-            <span>•</span>
             <span className="text-slate-400">Interactive Background Physics Enabled</span>
           </div>
         </footer>
       </div>
-
-      {/* GitHub Config Files Code Inspector Modal */}
-      <ConfigEditorModal
-        isOpen={isInspectorOpen}
-        onClose={() => setIsInspectorOpen(false)}
-        researchJsText={rawResearchJs}
-        teachingJsText={rawTeachingJs}
-        siteJsText={rawSiteJs}
-      />
     </div>
   );
 }

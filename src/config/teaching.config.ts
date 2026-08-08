@@ -8,18 +8,18 @@ export const teachingConfig: TeachingConfigData = {
       institution: "National University of Tainan (NUTN)",
       role: "Assistant Professor (2026 - Present)",
       years: "2026 - Present",
-      courses: "Geometry, Advanced Calculus, Probability Theory.",
+      courses: "Differential Geometry, Advanced Calculus, Linear Algebra, Multivariable Calculus.",
       courseList: [
         {
-          code: "150024",
-          name: "Geometry",
+          code: "MATH 301",
+          name: "Differential Geometry",
           semester: "Fall 2026",
           level: "Undergraduate",
           description: "Curves and surfaces in R3, Gauss map, first and second fundamental forms, principal curvatures, Gauss-Bonnet theorem.",
           notesLink: "#"
         },
         {
-          code: "150012",
+          code: "MATH 201",
           name: "Advanced Calculus I",
           semester: "Fall 2026",
           level: "Undergraduate",
@@ -35,19 +35,19 @@ export const teachingConfig: TeachingConfigData = {
       courses: "Calculus 1 & 2, Multivariable Calculus, Vector Calculus.",
       courseList: [
         {
-          code: "MATH4006/4007",
+          code: "CAL 101",
           name: "Calculus I & II",
-          semester: "Fall 2024",
+          semester: "2024 - 2025",
           level: "Undergraduate",
-          description: "Single variable differential and integral calculus for engineering and science majors.",
+          description: "Single and multivariable differential and integral calculus for mathematics and science majors.",
           notesLink: "#"
         },
         {
-          code: "MATH4008/4009",
-          name: "Calculus III & IV",
+          code: "CAL 202",
+          name: "Vector Calculus & Differential Forms",
           semester: "Spring 2025",
           level: "Undergraduate",
-          description: "Multivariable calculus and Vector calculus.",
+          description: "Line and surface integrals, Green's, Stokes', and Divergence theorems with introduction to differential forms.",
           notesLink: "#"
         }
       ]
@@ -56,9 +56,10 @@ export const teachingConfig: TeachingConfigData = {
       institution: "Pusan National University (PNU)",
       role: "Co-Lecturer (2023 - 2024)",
       years: "2023 - 2024",
-      courses: "Graduate course on Geometric Measure Theory.",
+      courses: "Graduate course on Geometric Measure Theory and Minimal Surfaces.",
       courseList: [
         {
+          code: "GRAD 702",
           name: "Geometric Measure Theory",
           semester: "Fall 2023",
           level: "Graduate",
