@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuan Shyong Ooi, PhD - Academic Website</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- MathJax for rendering LaTeX math formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="site-banner"></div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="nav-brand" id="brand-name">Yuan Shyong Ooi, PhD</a>
+      <ul class="nav-menu">
+        <li><a class="nav-link active" data-tab="home">Home</a></li>
+        <li><a class="nav-link" data-tab="publications">Publications</a></li>
+        <li><a class="nav-link" data-tab="projects">Projects</a></li>
+        <li><a class="nav-link" data-tab="teaching">Teaching</a></li>
+        <li><a class="nav-link" data-tab="cv">CV</a></li>
+        <li><a class="nav-link" data-tab="contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Profile Hero Card (Always visible at top of page) -->
+    <section class="profile-hero">
+      <div class="avatar-box" id="avatar-container">
+        <i class="fa-solid fa-user-graduate fa-4x"></i>
+      </div>
+      <div class="profile-details">
+        <h1>
+          <span id="hero-name">Yuan Shyong Ooi, PhD</span>
+          <span class="chinese-title" id="hero-chinese">(黃垣熊)</span>
+        </h1>
+        <div class="role-badge" id="hero-role">Assistant Professor</div>
+        <div class="profile-meta">
+          <div><i class="fa-solid fa-building"></i> <span id="hero-dept">Department of Applied Mathematics</span>, <span id="hero-inst">National University of Tainan</span></div>
+          <div><i class="fa-solid fa-envelope"></i> <span id="hero-email">shyong224@gmail.com</span></div>
+          <div><i class="fa-solid fa-location-dot"></i> <span id="hero-location">Tainan, Taiwan</span></div>
+        </div>
+        <div class="social-bar" id="social-chips"></div>
+      </div>
+    </section>
+
+    <!-- Tab 1: Home / About Me -->
+    <main id="tab-home" class="tab-content active">
+      <h2 class="section-title">About Me</h2>
+      <div class="content-card">
+        <p style="font-size: 1.1rem; font-weight: 500; color: var(--accent-color); margin-bottom: 1rem;" id="home-tagline"></p>
+        <div id="home-bio-paragraphs"></div>
+      </div>
+
+      <div class="highlight-box" id="home-highlight">
+        <i class="fa-solid fa-award"></i>
+        <div>
+          <strong id="highlight-title" style="font-size: 1.05rem; display: block;"></strong>
+          <span id="highlight-desc"></span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Tab 2: Publications -->
+    <main id="tab-publications" class="tab-content">
+      <h2 class="section-title">Publications & Preprints</h2>
+      <div id="publications-container"></div>
+    </main>
+
+    <!-- Tab 3: Projects -->
+    <main id="tab-projects" class="tab-content">
+      <h2 class="section-title">Research Projects & Themes</h2>
+      <div id="projects-container"></div>
+    </main>
+
+    <!-- Tab 4: Teaching -->
+    <main id="tab-teaching" class="tab-content">
+      <h2 class="section-title">Teaching</h2>
+      <div id="teaching-container"></div>
+    </main>
+
+    <!-- Tab 5: CV -->
+    <main id="tab-cv" class="tab-content">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      
+      <div style="margin-bottom: 1.5rem;" id="cv-download-box">
+        <a id="cv-pdf-btn" href="#" target="_blank" class="link-badge" style="font-size: 0.95rem; padding: 0.5rem 1rem;">
+          <i class="fa-solid fa-file-pdf"></i> Download Complete CV (PDF)
+        </a>
+      </div>
+
+      <h3 style="font-size: 1.2rem; color: var(--primary-color); margin: 1.5rem 0 1rem;">Academic Positions</h3>
+      <div id="cv-positions-container"></div>
+
+      <h3 style="font-size: 1.2rem; color: var(--primary-color); margin: 2rem 0 1rem;">Education</h3>
+      <div id="cv-education-container"></div>
+
+      <h3 style="font-size: 1.2rem; color: var(--primary-color); margin: 2rem 0 1rem;">Invited Conference & Seminar Talks</h3>
+      <div id="cv-talks-container"></div>
+    </main>
+
+    <!-- Tab 6: Contact -->
+    <main id="tab-contact" class="tab-content">
+      <h2 class="section-title">Contact Information</h2>
+      <div class="content-card">
+        <p style="margin-bottom: 1rem;" id="contact-text"></p>
+        <ul style="list-style: none; line-height: 2;">
+          <li><i class="fa-solid fa-envelope" style="width: 24px; color: var(--accent-color);"></i> <strong>Email:</strong> <a id="contact-email" href=""></a></li>
+          <li><i class="fa-solid fa-building" style="width: 24px; color: var(--accent-color);"></i> <strong>Office:</strong> <span id="contact-office"></span></li>
+          <li><i class="fa-solid fa-map-location-dot" style="width: 24px; color: var(--accent-color);"></i> <strong>Address:</strong> <span id="contact-address"></span></li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; <span id="footer-year"></span> Yuan Shyong Ooi. Built in Roberta Valtorta style.</p>
+    </footer>
+  </div>
+
+  <!-- Website Configuration Data -->
+  <script src="config.js"></script>
+
+  <!-- Interactive Rendering Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Theme Toggle
+      const themeBtn = document.getElementById("theme-btn");
+      const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      }
+
+      themeBtn.addEventListener("click", function () {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+          themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+      });
+
+      // 2. Tab Navigation
+      const navLinks = document.querySelectorAll(".nav-link");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+          const tabName = this.getAttribute("data-tab");
+          if (!tabName) return;
+
+          navLinks.forEach(l => l.classList.remove("active"));
+          tabContents.forEach(c => c.classList.remove("active"));
+
+          this.classList.add("active");
+          const activeTab = document.getElementById(`tab-${tabName}`);
+          if (activeTab) activeTab.classList.add("active");
+
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      // Set Year
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+      if (typeof siteData === "undefined") return;
+
+      // 3. Render Profile
+      const p = siteData.profile;
+      document.getElementById("brand-name").textContent = p.name;
+      document.getElementById("hero-name").textContent = p.name;
+      document.getElementById("hero-chinese").textContent = p.chineseName ? `(${p.chineseName})` : "";
+      document.getElementById("hero-role").textContent = p.role;
+      document.getElementById("hero-dept").textContent = p.department;
+      document.getElementById("hero-inst").textContent = p.institution;
+      document.getElementById("hero-email").textContent = p.email;
+      document.getElementById("hero-location").textContent = p.location;
+
+      if (p.avatarImage) {
+        document.getElementById("avatar-container").innerHTML = `<img src="${p.avatarImage}" alt="${p.name}" onerror="this.outerHTML='<i class=\\'fa-solid fa-user-graduate fa-4x\\'></i>'">`;
+      }
+
+      // Render Social Chips
+      const chipsContainer = document.getElementById("social-chips");
+      p.links.forEach(l => {
+        const chip = document.createElement("a");
+        chip.className = "social-chip";
+        chip.href = l.url;
+        chip.target = "_blank";
+        chip.innerHTML = `<i class="${l.icon}"></i> ${l.name}`;
+        chipsContainer.appendChild(chip);
+      });
+
+      // 4. Render Home Tab
+      document.getElementById("home-tagline").textContent = siteData.home.tagline;
+      const bioContainer = document.getElementById("home-bio-paragraphs");
+      siteData.home.bioParagraphs.forEach(para => {
+        const pTag = document.createElement("p");
+        pTag.style.marginBottom = "1rem";
+        pTag.innerHTML = para;
+        bioContainer.appendChild(pTag);
+      });
+
+      if (siteData.home.highlightBadge) {
+        document.getElementById("highlight-title").textContent = siteData.home.highlightBadge.title;
+        document.getElementById("highlight-desc").textContent = siteData.home.highlightBadge.description;
+      }
+
+      // 5. Render Publications
+      const pubContainer = document.getElementById("publications-container");
+      siteData.publications.forEach(pub => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+
+        let badges = "";
+        if (pub.doi) badges += `<a href="https://doi.org/${pub.doi}" target="_blank" class="link-badge"><i class="fa-solid fa-link"></i> DOI</a>`;
+        if (pub.arxiv) badges += `<a href="https://arxiv.org/abs/${pub.arxiv}" target="_blank" class="link-badge"><i class="fa-solid fa-file-lines"></i> arXiv:${pub.arxiv}</a>`;
+        if (pub.pdf) badges += `<a href="${pub.pdf}" target="_blank" class="link-badge"><i class="fa-solid fa-file-pdf"></i> PDF</a>`;
+
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${pub.title}</span>
+            <span class="year-chip">${pub.year}</span>
+          </div>
+          <div class="card-authors">${pub.authors}</div>
+          <div class="card-journal">${pub.journal}${pub.volume ? `, ${pub.volume}` : ''}</div>
+          ${pub.abstract ? `<div class="card-body" style="color: var(--text-muted); font-size: 0.9rem;">${pub.abstract}</div>` : ''}
+          ${badges ? `<div class="badge-links">${badges}</div>` : ''}
+        `;
+        pubContainer.appendChild(card);
+      });
+
+      // 6. Render Projects
+      const projContainer = document.getElementById("projects-container");
+      siteData.projects.forEach(proj => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${proj.title}</span>
+            <span class="year-chip">${proj.category}</span>
+          </div>
+          <div class="card-body">${proj.description}</div>
+        `;
+        projContainer.appendChild(card);
+      });
+
+      // 7. Render Teaching
+      const teachContainer = document.getElementById("teaching-container");
+      siteData.teaching.forEach(t => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${t.course}</span>
+            <span class="year-chip">${t.period}</span>
+          </div>
+          <div class="card-subtitle">${t.institution} (${t.role})</div>
+          <div class="card-body">${t.description}</div>
+        `;
+        teachContainer.appendChild(card);
+      });
+
+      // 8. Render CV
+      document.getElementById("cv-pdf-btn").href = p.cvLink;
+
+      const posContainer = document.getElementById("cv-positions-container");
+      siteData.cv.positions.forEach(pos => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${pos.title}</span>
+            <span class="year-chip">${pos.period}</span>
+          </div>
+          <div class="card-subtitle">${pos.institution}</div>
+          <div class="card-body" style="color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> ${pos.location}</div>
+        `;
+        posContainer.appendChild(card);
+      });
+
+      const eduContainer = document.getElementById("cv-education-container");
+      siteData.cv.education.forEach(edu => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${edu.degree}</span>
+            <span class="year-chip">${edu.year}</span>
+          </div>
+          <div class="card-subtitle">${edu.institution}</div>
+          <div class="card-body">${edu.thesis}</div>
+        `;
+        eduContainer.appendChild(card);
+      });
+
+      const talkContainer = document.getElementById("cv-talks-container");
+      siteData.cv.talks.forEach(talk => {
+        const card = document.createElement("div");
+        card.className = "content-card";
+        card.innerHTML = `
+          <div class="card-header">
+            <span class="card-title">${talk.title}</span>
+            <span class="year-chip">${talk.date}</span>
+          </div>
+          <div class="card-subtitle">${talk.event}</div>
+          <div class="card-body" style="color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> ${talk.location}</div>
+        `;
+        talkContainer.appendChild(card);
+      });
+
+      // 9. Render Contact
+      document.getElementById("contact-text").textContent = siteData.contact.text;
+      const contactEmail = document.getElementById("contact-email");
+      contactEmail.textContent = siteData.contact.email;
+      contactEmail.href = `mailto:${siteData.contact.email}`;
+      document.getElementById("contact-office").textContent = siteData.contact.office;
+      document.getElementById("contact-address").textContent = siteData.contact.address;
+
+      // Re-trigger MathJax
+      if (window.MathJax && MathJax.typesetPromise) {
+        MathJax.typesetPromise();
+      }
+    });
+  </script>
+</body>
+</html>
