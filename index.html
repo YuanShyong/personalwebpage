@@ -27,10 +27,7 @@
 </head>
 <body>
 
-  <!-- Top Banner -->
-  <div class="site-banner"></div>
-
-  <!-- Header & Navigation Bar -->
+  <!-- Header & Navigation Bar (Sticky Top) -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#" class="nav-brand" id="brand-name">Yuan Shyong Ooi</a>
@@ -50,8 +47,11 @@
     </div>
   </header>
 
+  <!-- Top Decorative Banner -->
+  <div class="site-banner"></div>
+
   <div class="container">
-    <!-- Profile Hero Card -->
+    <!-- Profile Hero Card (Positioned clearly below header and banner) -->
     <section class="profile-hero">
       <div class="avatar-box" id="avatar-container">
         <i class="fa-solid fa-user-graduate fa-4x"></i>
@@ -79,13 +79,8 @@
         <div id="home-bio-paragraphs"></div>
       </div>
 
-      <div class="highlight-box" id="home-highlight">
-        <i class="fa-solid fa-award"></i>
-        <div>
-          <strong id="highlight-title" style="font-size: 1.05rem; display: block;"></strong>
-          <span id="highlight-desc"></span>
-        </div>
-      </div>
+      <!-- Optional Highlight Box Container (Only rendered if highlightBadge exists in config.js) -->
+      <div id="highlight-box-container"></div>
     </main>
 
     <!-- Tab 2: Research Interests -->
@@ -135,7 +130,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>&copy; <span id="footer-year"></span> Yuan Shyong Ooi. Built in Roberta Valtorta style.</p>
+      <p>&copy; <span id="footer-year"></span> Yuan Shyong Ooi. All rights reserved.</p>
     </footer>
   </div>
 
@@ -206,7 +201,7 @@
         document.getElementById("avatar-container").innerHTML = `<img src="${p.avatarImage}" alt="${p.name}" onerror="this.outerHTML='<i class=\\'fa-solid fa-user-graduate fa-4x\\'></i>'">`;
       }
 
-      // Render Social Chips
+      // Render Social Chips (Only chips in profile.links will appear here)
       const chipsContainer = document.getElementById("social-chips");
       p.links.forEach(l => {
         const chip = document.createElement("a");
@@ -227,9 +222,18 @@
         bioContainer.appendChild(pTag);
       });
 
+      // Highlight Box (Only rendered if highlightBadge exists)
+      const highlightContainer = document.getElementById("highlight-box-container");
       if (siteData.home.highlightBadge) {
-        document.getElementById("highlight-title").textContent = siteData.home.highlightBadge.title;
-        document.getElementById("highlight-desc").textContent = siteData.home.highlightBadge.description;
+        highlightContainer.innerHTML = `
+          <div class="highlight-box">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong style="font-size: 1.05rem; display: block;">${siteData.home.highlightBadge.title}</strong>
+              <span>${siteData.home.highlightBadge.description}</span>
+            </div>
+          </div>
+        `;
       }
 
       // 5. Render Research Categories

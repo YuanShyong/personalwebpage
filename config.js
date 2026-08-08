@@ -1,8 +1,5 @@
 // =========================================================================
-// PERSONAL WEBSITE CONFIGURATION & DATA (UPDATED WITH ALL RECENT DETAILS)
-// =========================================================================
-// All website content is stored in this single configuration file.
-// To update your website, simply edit the text below!
+// PERSONAL WEBSITE CONFIGURATION & DATA
 // =========================================================================
 
 const siteData = {
@@ -19,14 +16,12 @@ const siteData = {
     avatarImage: "profile.jpg",  // Path or URL to profile photo
     cvLink: "cv.pdf",           // Path to CV PDF
     
-    // Academic & Social Link Chips
+    // Academic & Social Link Chips (Shown in top hero profile card)
     links: [
       { name: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "https://scholar.google.com.tw/citations?user=v3hHG8gAAAAJ&hl=zh-CN" },
       { name: "arXiv", icon: "fa-solid fa-file-lines", url: "https://arxiv.org/search/?query=Ooi%2C+Yuan+Shyong&searchtype=author" },
       { name: "Genealogy", icon: "fa-solid fa-tree", url: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=283494" },
-      { name: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/yuanshyong" },
-      { name: "Board Game Arena", icon: "fa-solid fa-dice-d20", url: "https://boardgamearena.com/player?id=92004757" },
-      { name: "3D Tetris Game", icon: "fa-solid fa-gamepad", url: "https://yuanshyong.github.io/3d-tetris/" }
+      { name: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/yuanshyong" }
     ]
   },
 
@@ -40,10 +35,7 @@ const siteData = {
       "Prior to joining NUTN, I gained extensive research experience through several postdoctoral appointments:<ul><li><strong>Postdoctoral Fellow</strong>, National Center for Theoretical Sciences (<a href='https://ncts.ntu.edu.tw/' target='_blank'>NCTS</a>), Taiwan (Feb 2024 – Jul 2026)</li><li><strong>Postdoctoral Fellow</strong>, Basic Research Laboratory (<a href='https://sites.google.com/view/geometrybrl/people?authuser=0' target='_blank'>BRL</a>), Pusan National University, South Korea, hosted by Professor <a href='https://scholar.google.com/citations?user=RrX0fsEAAAAJ&hl=ko' target='_blank'>Juncheol Pyo</a> (Aug 2021 – Feb 2024)</li><li><strong>Postdoctoral Fellow</strong>, National Taiwan University (Oct 2020 – Jul 2021)</li></ul>",
       "When I’m not doing math, I’m usually playing strategy board games—which, to no one's surprise, turns out to be just more math in disguise. Feel free to find me on <a href='https://boardgamearena.com/player?id=92004757' target='_blank'>BGA (Board Game Arena)</a> or try my <a href='https://yuanshyong.github.io/3d-tetris/' target='_blank'>3D Tetris game</a>."
     ],
-    highlightBadge: {
-      title: "Faculty Position",
-      description: "Assistant Professor in the Department of Applied Mathematics at National University of Tainan (國立臺南大學) starting Fall 2026."
-    }
+    highlightBadge: null // Removed bottom homepage banner as requested
   },
 
   // Structured Research Interests
@@ -178,7 +170,7 @@ const siteData = {
     }
   ],
 
-  // Misc Links Section
+  // Misc Links Section (Preserved for CV & Misc tab)
   miscLinks: [
     { name: "My CV (PDF)", url: "cv.pdf", isPdf: true },
     { name: "My Mathematics Genealogy", url: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=283494", isPdf: false },
