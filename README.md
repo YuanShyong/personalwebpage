@@ -30,18 +30,47 @@ Edit this file to update:
 - **CV Link & Social Media Links** (Google Scholar, arXiv, GitHub, Genealogy)
 - **Campus Address & Office details**
 
-### 2. Research & Publications: `research.config.js`
-Edit this file to update:
-- **Research Statement**
-- **Research Themes & Problem Areas**
-- **Co-Authors & Collaborators**
-- **Publications & Preprints List** (Titles, Journals, arXiv IDs, Year, Tags, Abstracts, and PDFs)
+### 2. Research, Publications & Seminar Talks: `research.config.js` & `teaching.config.js`
+Edit these files to update:
+- **Research Statement & Research Themes** (`research.config.js`)
+- **Co-Authors & Collaborators** (`research.config.js`)
+- **Publications & Preprints List** (`research.config.js`)
+- **Academic Seminar & Conference Talks**: Located under `teaching.config.js` in the `talks` list (now automatically merged under the **Research** tab on the website!).
 
-### 3. Teaching & Talks: `teaching.config.js`
-Edit this file to update:
+### 3. Teaching & Course Webpages: `teaching.config.js`
+Edit `teaching.config.js` to update:
 - **Teaching Philosophy Statement**
-- **Academic Appointments & Course Lists** (NUTN, NTU, PNU)
-- **Talks, Colloquia & Conference Presentations** (Upcoming & Past talks with dates, locations, and slide links)
+- **Academic Appointments & Course Catalog**: Each course in `courseList` automatically generates its own **dedicated course webpage**!
+- **How to Add or Edit Course Webpages**:
+  Simply add an entry to `courseList` inside `teaching.config.js`:
+  ```javascript
+  {
+    id: "math-301-diff-geom", // Unique ID for direct shareable link (#course/math-301-diff-geom)
+    code: "MATH 301",
+    name: "Differential Geometry",
+    semester: "Fall 2026",
+    level: "Undergraduate",
+    institution: "NUTN",
+    time: "Mon & Wed 10:00 - 11:50",
+    location: "Math Science Building, Room 302",
+    instructor: "Dr. Yuan Shyong Ooi",
+    officeHours: "Tue & Thu 14:00 - 16:00",
+    description: "An introductory course in differential geometry...",
+    textbook: "M. P. do Carmo, 'Differential Geometry of Curves and Surfaces'",
+    gradingPolicy: "Homework (30%), Midterm Exam (35%), Final Exam (35%)",
+    announcements: [
+      { date: "Sept 10, 2026", title: "Welcome!", content: "First homework released." }
+    ],
+    syllabus: [
+      { week: "Week 1-3", topic: "Theory of Curves", description: "Arc length, Frenet frame..." }
+    ],
+    materials: [
+      { title: "Course Syllabus (PDF)", link: "syllabus.pdf", type: "pdf" },
+      { title: "Lecture Notes 01", link: "#", type: "notes" }
+    ]
+  }
+  ```
+  When students click on the course in your Teaching tab or open `#course/math-301-diff-geom`, a complete standalone course webpage opens with announcements, syllabus, and download links!
 
 ---
 

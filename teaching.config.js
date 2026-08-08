@@ -16,20 +16,71 @@ const teachingConfig = {
       courses: "Differential Geometry, Advanced Calculus, Linear Algebra, Multivariable Calculus.",
       courseList: [
         {
+          id: "math-301-diff-geom",
           code: "MATH 301",
           name: "Differential Geometry",
           semester: "Fall 2026",
           level: "Undergraduate",
-          description: "Curves and surfaces in R3, Gauss map, first and second fundamental forms, principal curvatures, Gauss-Bonnet theorem.",
-          notesLink: "#"
+          institution: "NUTN",
+          time: "Mon & Wed 10:00 - 11:50",
+          location: "Math Science Building, Room 302",
+          instructor: "Dr. Yuan Shyong Ooi (黃垣熊)",
+          officeHours: "Tue & Thu 14:00 - 16:00",
+          description: "An introductory course in differential geometry covering local theory of curves and surfaces in R3, the Gauss map, fundamental forms, principal curvatures, geodesics, and the Gauss-Bonnet theorem.",
+          prerequisites: "Advanced Calculus and Linear Algebra",
+          textbook: "M. P. do Carmo, 'Differential Geometry of Curves and Surfaces' (2nd Edition)",
+          gradingPolicy: "Homework (30%), Midterm Exam (35%), Final Exam & Presentation (35%)",
+          announcements: [
+            {
+              date: "Sept 10, 2026",
+              title: "Welcome to Differential Geometry!",
+              content: "Course syllabus and first homework set have been uploaded. Office hours start next week."
+            }
+          ],
+          syllabus: [
+            { week: "Week 1-3", topic: "Theory of Plane and Space Curves", description: "Arc length parameterization, Frenet-Serret frame, curvature, and torsion." },
+            { week: "Week 4-7", topic: "Surfaces in R3 and First Fundamental Form", description: "Regular surfaces, tangent plane, first fundamental form, and isometry." },
+            { week: "Week 8-11", topic: "Gauss Map and Second Fundamental Form", description: "Shape operator, normal curvature, principal curvatures, Gauss and mean curvatures." },
+            { week: "Week 12-16", topic: "Intrinsic Geometry & Gauss-Bonnet Theorem", description: "Geodesics, parallel transport, Theorema Egregium, and global Gauss-Bonnet formula." }
+          ],
+          materials: [
+            { title: "Course Syllabus (PDF)", link: "#", type: "pdf", date: "Fall 2026" },
+            { title: "Lecture Notes 01: Curves & Frenet Frame", link: "#", type: "notes", date: "Sept 2026" },
+            { title: "Homework 01 - Curves Parameterization", link: "#", type: "assignment", date: "Sept 2026" }
+          ]
         },
         {
+          id: "math-201-adv-calc",
           code: "MATH 201",
           name: "Advanced Calculus I",
           semester: "Fall 2026",
           level: "Undergraduate",
-          description: "Topology of Euclidean spaces, limits, continuity, compactness, multivariable differentiation, and Taylor's theorem.",
-          notesLink: "#"
+          institution: "NUTN",
+          time: "Tue & Thu 09:00 - 10:50",
+          location: "Math Science Building, Room 201",
+          instructor: "Dr. Yuan Shyong Ooi (黃垣熊)",
+          officeHours: "Tue & Thu 14:00 - 16:00",
+          description: "A rigorous foundation in real analysis: metric space topology of Euclidean space, sequences, continuity, compactness, multivariable differentiation, and inverse/implicit function theorems.",
+          prerequisites: "Calculus II and Introduction to Mathematical Proofs",
+          textbook: "W. Rudin, 'Principles of Mathematical Analysis' & R. Bartle, 'Elements of Real Analysis'",
+          gradingPolicy: "Homework & Quizzes (30%), Midterm (35%), Final Exam (35%)",
+          announcements: [
+            {
+              date: "Sept 12, 2026",
+              title: "Homework 1 Released",
+              content: "Problem set 1 on metric space topology is now posted under Materials."
+            }
+          ],
+          syllabus: [
+            { week: "Week 1-4", topic: "Euclidean Space & Metric Topology", description: "Open/closed sets, limit points, convergence, and completeness." },
+            { week: "Week 5-8", topic: "Compactness and Connectedness", description: "Heine-Borel theorem, continuous functions on compact sets, uniform continuity." },
+            { week: "Week 9-12", topic: "Multivariable Differentiation", description: "Total derivative, directional derivatives, Taylor series, and extrema." },
+            { week: "Week 13-16", topic: "Inverse and Implicit Function Theorems", description: "Contraction mapping principle, proofs and applications of Inverse/Implicit theorems." }
+          ],
+          materials: [
+            { title: "Syllabus & Grading Scheme", link: "#", type: "pdf", date: "Fall 2026" },
+            { title: "Problem Set 01 (Real Analysis)", link: "#", type: "assignment", date: "Sept 2026" }
+          ]
         }
       ]
     },
@@ -40,20 +91,30 @@ const teachingConfig = {
       courses: "Calculus 1 & 2, Multivariable Calculus, Vector Calculus.",
       courseList: [
         {
+          id: "cal-101-ntu",
           code: "CAL 101",
           name: "Calculus I & II",
           semester: "2024 - 2025",
           level: "Undergraduate",
+          institution: "NTU",
           description: "Single and multivariable differential and integral calculus for mathematics and science majors.",
-          notesLink: "#"
+          textbook: "James Stewart, 'Calculus: Early Transcendentals'",
+          materials: [
+            { title: "NTU Calculus Lecture Outlines", link: "#", type: "notes", date: "2024" }
+          ]
         },
         {
+          id: "cal-202-vector-calc",
           code: "CAL 202",
           name: "Vector Calculus & Differential Forms",
           semester: "Spring 2025",
           level: "Undergraduate",
+          institution: "NTU",
           description: "Line and surface integrals, Green's, Stokes', and Divergence theorems with introduction to differential forms.",
-          notesLink: "#"
+          textbook: "Colley, 'Vector Calculus'",
+          materials: [
+            { title: "Vector Calculus Formula Summary", link: "#", type: "pdf", date: "Spring 2025" }
+          ]
         }
       ]
     },
@@ -64,12 +125,17 @@ const teachingConfig = {
       courses: "Graduate course on Geometric Measure Theory and Minimal Surfaces.",
       courseList: [
         {
+          id: "grad-702-gmt",
           code: "GRAD 702",
           name: "Geometric Measure Theory",
           semester: "Fall 2023",
           level: "Graduate",
+          institution: "PNU",
           description: "Hausdorff measures, rectifiable sets, varifolds, currents, and regularity theory for area-minimizing hypersurfaces.",
-          notesLink: "#"
+          textbook: "L. Simon, 'Lectures on Geometric Measure Theory'",
+          materials: [
+            { title: "GMT Seminar Lecture Notes", link: "#", type: "notes", date: "Fall 2023" }
+          ]
         }
       ]
     }

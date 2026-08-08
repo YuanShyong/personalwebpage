@@ -20,7 +20,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
     { id: 'home', label: 'Home', icon: 'fa-house' },
     { id: 'research', label: 'Research', icon: 'fa-shapes' },
     { id: 'publications', label: 'Publications', icon: 'fa-book-bookmark' },
-    { id: 'teaching', label: 'Teaching & Talks', icon: 'fa-chalkboard-user' },
+    { id: 'teaching', label: 'Teaching', icon: 'fa-chalkboard-user' },
     { id: 'misc', label: 'CV & Links', icon: 'fa-file-pdf' },
     { id: 'contact', label: 'Contact', icon: 'fa-envelope' },
   ];

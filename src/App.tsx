@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { siteConfig } from './config/site.config';
 import { researchConfig } from './config/research.config';
 import { teachingConfig } from './config/teaching.config';
+import { Course } from './types';
 
 import { PhysicsBackground } from './components/PhysicsBackground';
 import { HeaderNav } from './components/HeaderNav';
@@ -10,12 +11,61 @@ import { HomeTab } from './components/HomeTab';
 import { ResearchTab } from './components/ResearchTab';
 import { PublicationsTab } from './components/PublicationsTab';
 import { TeachingTab } from './components/TeachingTab';
+import { CourseDetailPage } from './components/CourseDetailPage';
 import { MiscTab } from './components/MiscTab';
 import { ContactTab } from './components/ContactTab';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [explodeTrigger, setExplodeTrigger] = useState<number>(0);
+
+  // Helper to find all courses across all teaching experiences
+  const allCourses: Course[] = teachingConfig.experience.flatMap(
+    (exp) => exp.courseList || []
+  );
+
+  // Hash listener for direct shareable course links (e.g. #course/math-301-diff-geom)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#course/')) {
+        const courseId = hash.replace('#course/', '');
+        const found = allCourses.find((c) => c.id === courseId || c.code?.toLowerCase().replace(/\s+/g, '-') === courseId);
+        if (found) {
+          setSelectedCourse(found);
+          setActiveTab('teaching');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [allCourses]);
+
+  const handleSelectCourse = (course: Course) => {
+    setSelectedCourse(course);
+    window.location.hash = `#course/${course.id}`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToTeaching = () => {
+    setSelectedCourse(null);
+    window.location.hash = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    if (tab !== 'teaching') {
+      setSelectedCourse(null);
+      if (window.location.hash.startsWith('#course/')) {
+        window.location.hash = '';
+      }
+    }
+  };
 
   const handleTriggerExplosion = () => {
     setExplodeTrigger((prev) => prev + 1);
@@ -33,7 +83,7 @@ export default function App() {
       <HeaderNav
         profile={siteConfig.profile}
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={handleTabChange}
         onTriggerExplosion={handleTriggerExplosion}
       />
 
@@ -50,7 +100,7 @@ export default function App() {
           {activeTab === 'home' && (
             <HomeTab
               home={siteConfig.home}
-              onNavigateTab={setActiveTab}
+              onNavigateTab={handleTabChange}
               onExplode={handleTriggerExplosion}
             />
           )}
@@ -58,6 +108,7 @@ export default function App() {
           {activeTab === 'research' && (
             <ResearchTab
               data={researchConfig}
+              talks={teachingConfig.talks}
             />
           )}
 
@@ -68,9 +119,17 @@ export default function App() {
           )}
 
           {activeTab === 'teaching' && (
-            <TeachingTab
-              data={teachingConfig}
-            />
+            selectedCourse ? (
+              <CourseDetailPage
+                course={selectedCourse}
+                onBack={handleBackToTeaching}
+              />
+            ) : (
+              <TeachingTab
+                data={teachingConfig}
+                onSelectCourse={handleSelectCourse}
+              />
+            )
           )}
 
           {activeTab === 'misc' && (

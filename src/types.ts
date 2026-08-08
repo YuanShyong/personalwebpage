@@ -74,21 +74,53 @@ export interface ResearchConfigData {
   collaborators: Collaborator[];
 }
 
+export interface CourseMaterial {
+  title: string;
+  link: string;
+  type?: 'pdf' | 'notes' | 'assignment' | 'link';
+  date?: string;
+}
+
+export interface CourseAnnouncement {
+  date: string;
+  title: string;
+  content: string;
+}
+
+export interface CourseSyllabusTopic {
+  week?: string;
+  topic: string;
+  description?: string;
+}
+
 export interface Course {
+  id: string;
   code?: string;
   name: string;
   semester?: string;
   level?: 'Undergraduate' | 'Graduate';
+  institution?: string;
+  time?: string;
+  location?: string;
+  instructor?: string;
+  officeHours?: string;
   description?: string;
+  prerequisites?: string;
+  textbook?: string;
+  gradingPolicy?: string;
+  externalUrl?: string;
   notesLink?: string;
   syllabusLink?: string;
+  announcements?: CourseAnnouncement[];
+  syllabus?: CourseSyllabusTopic[];
+  materials?: CourseMaterial[];
 }
 
 export interface TeachingExperience {
   institution: string;
   role: string;
   years: string;
-  courses: string; // Summary line or detail
+  courses: string;
   courseList?: Course[];
 }
 
