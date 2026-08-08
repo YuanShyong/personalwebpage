@@ -61,6 +61,8 @@ const siteConfig = {
   ]
 };
 
+export default siteConfig;
+
 if (typeof module !== 'undefined') {
   module.exports = siteConfig;
 }

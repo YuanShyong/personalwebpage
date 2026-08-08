@@ -162,6 +162,8 @@ const researchConfig = {
   ]
 };
 
+export default researchConfig;
+
 if (typeof module !== 'undefined') {
   module.exports = researchConfig;
 }

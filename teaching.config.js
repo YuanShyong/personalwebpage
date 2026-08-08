@@ -199,6 +199,8 @@ const teachingConfig = {
   ]
 };
 
+export default teachingConfig;
+
 if (typeof module !== 'undefined') {
   module.exports = teachingConfig;
 }
