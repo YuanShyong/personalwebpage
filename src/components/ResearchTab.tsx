@@ -23,13 +23,6 @@ export const ResearchTab: React.FC<ResearchTabProps> = ({ data, onOpenInspector 
             </span>
           </div>
         </div>
-        <button
-          onClick={onOpenInspector}
-          className="shrink-0 px-3 py-1.5 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold uppercase font-mono rounded text-xs cursor-pointer transition flex items-center gap-1.5 shadow"
-        >
-          <i className="fa-solid fa-code"></i>
-          <span>View research.config.js</span>
-        </button>
       </div>
 
       {/* 01 Research Overview Statement */}
@@ -43,9 +36,6 @@ export const ResearchTab: React.FC<ResearchTabProps> = ({ data, onOpenInspector 
               Research Statement
             </h2>
           </div>
-          <code className="hidden sm:inline-block text-[10px] bg-slate-900 p-1.5 border border-slate-800 text-slate-500 font-mono">
-            Source: research.config.js
-          </code>
         </div>
 
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
