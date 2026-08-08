@@ -1,223 +1,199 @@
 // =========================================================================
-// PERSONAL WEBSITE CONFIGURATION & DATA (ROBERTA VALTORTA STYLE)
+// PERSONAL WEBSITE CONFIGURATION & DATA (UPDATED WITH ALL RECENT DETAILS)
 // =========================================================================
-// All website content is stored cleanly in this single configuration file.
+// All website content is stored in this single configuration file.
 // To update your website, simply edit the text below!
 // =========================================================================
 
 const siteData = {
   // Basic Profile Info
   profile: {
-    name: "Yuan Shyong Ooi, PhD",
+    name: "Yuan Shyong Ooi",
     chineseName: "黃垣熊",
     role: "Assistant Professor",
-    email: "shyong224@gmail.com",
-    secondaryEmail: "yuanshyong@ncts.ntu.edu.tw",
     department: "Department of Applied Mathematics",
     institution: "National University of Tainan (NUTN)",
     location: "Tainan, Taiwan",
-    bannerImage: "assets/banner.jpg", // Replace with custom banner if desired
-    avatarImage: "assets/photo.jpg",  // Replace with profile photo
-    cvLink: "assets/cv.pdf",          // Path or URL to CV PDF
+    primaryEmail: "yuanshyong@mail.nutn.edu.tw",
+    permanentEmail: "shyong224@gmail.com",
+    avatarImage: "profile.jpg",  // Path or URL to profile photo
+    cvLink: "cv.pdf",           // Path to CV PDF
     
-    // Academic & Social Links
+    // Academic & Social Link Chips
     links: [
-      { name: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "#" },
-      { name: "MathSciNet", icon: "fa-solid fa-square-root-variable", url: "https://mathscinet.ams.org/mathscinet/MRAuthorID/1303444" },
-      { name: "ResearchGate", icon: "fa-brands fa-researchgate", url: "https://www.researchgate.net/profile/Yuan-Shyong-Ooi" },
+      { name: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "https://scholar.google.com.tw/citations?user=v3hHG8gAAAAJ&hl=zh-CN" },
+      { name: "arXiv", icon: "fa-solid fa-file-lines", url: "https://arxiv.org/search/?query=Ooi%2C+Yuan+Shyong&searchtype=author" },
+      { name: "Genealogy", icon: "fa-solid fa-tree", url: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=283494" },
       { name: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/yuanshyong" },
-      { name: "NCTS Profile", icon: "fa-solid fa-building-columns", url: "https://ncts.ntu.edu.tw/people_detail.php?gid=436&bgid=7" }
+      { name: "Board Game Arena", icon: "fa-solid fa-dice-d20", url: "https://boardgamearena.com/player?id=92004757" },
+      { name: "3D Tetris Game", icon: "fa-solid fa-gamepad", url: "https://yuanshyong.github.io/3d-tetris/" }
     ]
   },
 
   // Homepage Tagline & Bio
   home: {
-    tagline: "Differential geometer exploring minimal submanifolds, mean curvature flow, and soliton rigidity.",
+    tagline: "Assistant Professor in Differential Geometry & Geometric Analysis at National University of Tainan.",
     bioParagraphs: [
-      "I am an Assistant Professor in the <a href='https://www.amath.nutn.edu.tw/' target='_blank'>Department of Applied Mathematics at National University of Tainan (NUTN)</a> in Taiwan. I earned my Ph.D. in Mathematics from National Taiwan University in 2020 under the supervision of Prof. Yng-Ing Lee.",
-      "Prior to joining NUTN, I was a Postdoctoral Fellow at the National Center for Theoretical Sciences (NCTS) at National Taiwan University (2024–2026), a Postdoctoral Fellow at Pusan National University in South Korea (2021–2024), and an Instructor/Postdoctoral Fellow at National Taiwan University (2020–2021).",
-      "My research lies at the intersection of differential geometry and geometric analysis. I focus primarily on minimal submanifold theory—including higher codimension minimal submanifolds, Bernstein-type problems, and graphical minimal submanifolds—as well as soliton solutions of mean curvature flow (such as self-shrinkers and \\(\\lambda\\)-translating hypersurfaces), stability, and rigidity theorems.",
-      "Additional details about my research can be explored in the publications and projects sections. For inquiries or potential academic collaborations, feel free to reach out via email."
+      "My family name is Ooi, and Yuan Shyong is my given name. Starting Fall 2026, I am an Assistant Professor in the <a href='https://www.amath.nutn.edu.tw/' target='_blank'>Department of Applied Mathematics</a> at the National University of Tainan (國立臺南大學).",
+      "My research interests lie in differential geometry and geometric analysis, with a particular focus on minimal submanifolds, mean curvature flow, and geometric partial differential equations. Driven by a passion for uncovering mathematical truths, I am dedicated to advancing both research and education in these fields.",
+      "Born and raised in Malaysia, I completed my Bachelor’s degree at the University of Science, Malaysia (USM). I then moved to Taiwan, where I earned both my M.Sc. and Ph.D. from National Taiwan University (NTU) under the supervision of Professor <a href='https://www.genealogy.math.ndsu.nodak.edu/id.php?id=39253' target='_blank'>Yng-Ing Lee (李瑩英)</a>.",
+      "Prior to joining NUTN, I gained extensive research experience through several postdoctoral appointments:<ul><li><strong>Postdoctoral Fellow</strong>, National Center for Theoretical Sciences (<a href='https://ncts.ntu.edu.tw/' target='_blank'>NCTS</a>), Taiwan (Feb 2024 – Jul 2026)</li><li><strong>Postdoctoral Fellow</strong>, Basic Research Laboratory (<a href='https://sites.google.com/view/geometrybrl/people?authuser=0' target='_blank'>BRL</a>), Pusan National University, South Korea, hosted by Professor <a href='https://scholar.google.com/citations?user=RrX0fsEAAAAJ&hl=ko' target='_blank'>Juncheol Pyo</a> (Aug 2021 – Feb 2024)</li><li><strong>Postdoctoral Fellow</strong>, National Taiwan University (Oct 2020 – Jul 2021)</li></ul>",
+      "When I’m not doing math, I’m usually playing strategy board games—which, to no one's surprise, turns out to be just more math in disguise. Feel free to find me on <a href='https://boardgamearena.com/player?id=92004757' target='_blank'>BGA (Board Game Arena)</a> or try my <a href='https://yuanshyong.github.io/3d-tetris/' target='_blank'>3D Tetris game</a>."
     ],
     highlightBadge: {
-      title: "Faculty Appointment",
-      description: "Appointed as Full-time Faculty Member (Assistant Professor) in the Department of Applied Mathematics at National University of Tainan starting August 2026."
+      title: "Faculty Position",
+      description: "Assistant Professor in the Department of Applied Mathematics at National University of Tainan (國立臺南大學) starting Fall 2026."
     }
   },
 
-  // Research Projects / Themes
-  projects: [
+  // Structured Research Interests
+  researchCategories: [
     {
-      title: "Minimal Submanifolds in Higher Codimension",
-      category: "Geometric Analysis",
-      description: "Investigating the existence, uniqueness, and isolated singularity behavior of minimal submanifolds in higher codimension ambient spaces, extending classical codimension-one results and Bernstein-type theorems."
+      title: "1. Minimal Submanifolds",
+      items: [
+        "Higher codimension minimal submanifold problems.",
+        "Classical minimal hypersurface Bernstein-type problems.",
+        "Graphical minimal submanifolds problems (minimal surface systems).",
+        "Dirichlet problems for minimal surface system, including existence, regularity, stability, and uniqueness issues."
+      ]
     },
     {
-      title: "Soliton Solutions for Mean Curvature Flow",
-      category: "Differential Geometry & Geometric Flows",
-      description: "Studying self-similar solutions, self-shrinkers, and translating solitons for mean curvature flow (MCF). Focus on classifying graphical translators moving along non-graphical directions."
-    },
-    {
-      title: "Stability & Rigidity of \\(\\lambda\\)-Translating Hypersurfaces",
-      category: "Weighted Riemannian Geometry",
-      description: "Defining stability notions for \\(\\lambda\\)-translators in weighted Euclidean spaces and establishing characterizations of grim reaper hyperplanes, cylindrical translators, and hyperplanes under curvature bounds."
+      title: "2. Geometric Flow",
+      items: [
+        "Self-similar solutions of Mean Curvature Flow (MCF).",
+        "Rigidity and classification of Mean Curvature Flow soliton solutions."
+      ]
     }
   ],
 
-  // Publications
+  // Publications & Preprints
   publications: [
     {
-      title: "Stability Properties and Rigidity Results of \\(\\lambda\\)-Translating Hypersurfaces",
-      authors: "Yuan Shyong Ooi and Jihyeon Lee",
-      journal: "Communications in Analysis and Geometry",
+      title: "Rigidity results for mean curvature flow graphical translators moving in non-graphical direction",
+      authors: "with <a href='https://sites.google.com/view/john-man-shun-ma/home' target='_blank'>John Ma Man Shun</a> and Juncheol Pyo",
+      journal: "Proceedings of the American Mathematical Society 151.12 (2023): 5391-5402",
       year: "2023",
-      volume: "In Press / Volume 23",
+      pdf: "papers/rigidity_results.pdf",
       doi: "",
       arxiv: "",
-      pdf: "",
-      abstract: "Defines stability for \\(\\lambda\\)-translators and obtains new rigidity theorems, proving characterizations of grim reaper hyperplanes and hyperplanes under curvature bounds."
-    },
-    {
-      title: "Rigidity results for graphical translators for the mean curvature flow moving in non-graphical direction",
-      authors: "John Man Shun Ma, Yuan Shyong Ooi*, and Juncheol Pyo",
-      journal: "Proceedings of the American Mathematical Society",
-      year: "2023",
-      volume: "151, no. 12, pp. 5391–5402",
-      doi: "10.1090/proc/16550",
-      arxiv: "2210.03707",
-      pdf: "",
-      abstract: "Establishes rigidity results for graphical translators of mean curvature flow moving along directions non-parallel to the graphical direction."
+      abstract: "Establishes rigidity theorems for graphical translators of mean curvature flow moving along non-graphical directions."
     },
     {
       title: "Higher codimension minimal submanifold with isolated singularity",
       authors: "Yuan Shyong Ooi",
-      journal: "Journal of Geometric Analysis",
+      journal: "Journal of Geometric Analysis 32, no.5, Paper No. 164, 30 pp",
       year: "2022",
-      volume: "32, no. 5, Paper No. 164, 30 pp.",
+      pdf: "papers/isolated_singularity.pdf",
       doi: "10.1007/s12220-022-00908-w",
       arxiv: "",
-      pdf: "",
-      abstract: "Analyzes higher codimension minimal submanifolds possessing isolated singularities, providing existence and regularity criteria."
+      abstract: "Analyzes higher codimension minimal submanifolds possessing isolated singularities, providing existence and regularity results."
     },
     {
       title: "Uniqueness of Minimal Graph in General Codimension",
-      authors: "Yng-Ing Lee, Yuan Shyong Ooi*, and Mao-Pei Tsui",
-      journal: "Journal of Geometric Analysis",
+      authors: "with Yng-Ing Lee and Mao-Pei Tsui",
+      journal: "Journal of Geometric Analysis 29, 1211–1233",
       year: "2019",
-      volume: "29, pp. 1211–1233",
+      pdf: "papers/uniqueness_minimal_graph.pdf",
       doi: "10.1007/s12220-018-0036-7",
       arxiv: "",
+      abstract: "Proves uniqueness of graphical minimal submanifolds in general codimension under suitable gradient conditions."
+    },
+    {
+      title: "Stability properties and rigidity results of $\\lambda$-translating hypersurfaces",
+      authors: "with <a href='https://sites.google.com/view/jihyeonlee/home' target='_blank'>Jihyeon Lee</a>",
+      journal: "Submitted",
+      year: "Preprint",
       pdf: "",
-      abstract: "Proves uniqueness of graphical minimal submanifolds in general codimension under gradient and metric conditions."
+      doi: "",
+      arxiv: "",
+      abstract: "Investigates stability notions for $\\lambda$-translators and proves characterization and rigidity theorems in weighted space."
     }
   ],
 
-  // Teaching
+  // Recent & Upcoming Talks
+  talks: [
+    {
+      date: "July 2026",
+      event: "Hainan University",
+      link: ""
+    },
+    {
+      date: "July 2026",
+      event: "IBS-CGP Seminar",
+      link: "https://cgp.ibs.re.kr/activities/seminars/cgp_seminar"
+    },
+    {
+      date: "March 2026",
+      event: "National Pingtung University",
+      link: "https://math.nptu.edu.tw/p/406-1138-193456,r964.php?Lang=zh-tw"
+    },
+    {
+      date: "March 2026",
+      event: "National University of Tainan",
+      link: "https://www.nutn.edu.tw/information_details.html?boardno=103020&classid=3"
+    },
+    {
+      date: "March 2026",
+      event: "NCTS Differential Geometry Seminar",
+      link: "https://ncts.ntu.edu.tw/events_1_detail.php?nid=3081"
+    },
+    {
+      date: "Jan 2026",
+      event: "2026 TMS Annual Meeting",
+      link: "https://2026tms-en.tms.org.tw/abstract/special-sessions"
+    },
+    {
+      date: "Nov 2025",
+      event: "The 5th Japan-Taiwan Joint Conference on Differential Geometry",
+      link: "https://www-math.st.tokushima-u.ac.jp/~yasumoto/5thJapanTaiwan20251102/"
+    },
+    {
+      date: "March 2025",
+      event: "NTHU Geometry Seminar",
+      link: ""
+    },
+    {
+      date: "Aug 2024",
+      event: "NCTS: Young Geometric Analysts Forum",
+      link: ""
+    },
+    {
+      date: "April 2024",
+      event: "Academia Sinica and NCTS: Taipei Postdoc Seminar",
+      link: ""
+    }
+  ],
+
+  // Teaching & Academic Experience
   teaching: [
     {
-      course: "Advanced Calculus & Probability and Statistics",
-      institution: "National University of Tainan (NUTN)",
-      role: "Instructor",
-      period: "2026 – Present",
-      description: "Core undergraduate courses in analysis, probability theory, and mathematical statistics."
+      institution: "National Taiwan University (NTU)",
+      role: "Instructor (2024 - 2025)",
+      courses: "Calculus 1 & 2, Multivariable Calculus, Vector Calculus."
     },
     {
-      course: "Calculus III & IV (MATH4008/MATH4009)",
-      institution: "National Taiwan University (NTU)",
-      role: "Instructor",
-      period: "Spring 2021",
-      description: "Multivariable Calculus and Vector Calculus for mathematics and science majors."
-    },
-    {
-      course: "Real Analysis & Calculus",
-      institution: "National Taiwan University (NTU)",
-      role: "Teaching Assistant / Tutor",
-      period: "2012 – 2018",
-      description: "Conducted problem tutorials, grading, and review sessions across 12 academic semesters."
+      institution: "Pusan National University (PNU)",
+      role: "Co-Lecturer (2023 - 2024)",
+      courses: "Graduate course on Geometric Measure Theory."
     }
   ],
 
-  // CV Sections (Positions, Education, Talks)
-  cv: {
-    positions: [
-      {
-        title: "Assistant Professor",
-        institution: "National University of Tainan (NUTN)",
-        period: "Aug 2026 – Present",
-        location: "Tainan, Taiwan"
-      },
-      {
-        title: "Postdoctoral Fellow",
-        institution: "National Center for Theoretical Sciences (NCTS), NTU",
-        period: "Mar 2024 – Jul 2026",
-        location: "Taipei, Taiwan"
-      },
-      {
-        title: "Adjunct Assistant Professor / Postdoctoral Fellow",
-        institution: "National Taiwan University (NTU)",
-        period: "Oct 2020 – Jul 2021; Sep 2024 – Jul 2025",
-        location: "Taipei, Taiwan"
-      },
-      {
-        title: "Postdoctoral Fellow",
-        institution: "Pusan National University (PNU)",
-        period: "Aug 2021 – Feb 2024",
-        location: "Busan, South Korea"
-      }
-    ],
-    education: [
-      {
-        degree: "Ph.D. in Mathematics",
-        institution: "National Taiwan University (NTU)",
-        year: "2014 – 2020",
-        thesis: "Dissertation: Existence and Uniqueness of Minimal Submanifold in Higher Codimension (Advisor: Prof. Yng-Ing Lee)"
-      },
-      {
-        degree: "M.Sc. in Mathematics",
-        institution: "National Taiwan University (NTU)",
-        year: "2011 – 2014",
-        thesis: "Thesis: Min-max construction of minimal surface (Advisor: Prof. Yng-Ing Lee)"
-      },
-      {
-        degree: "B.Sc. (Honours) in Mathematics",
-        institution: "Universiti Sains Malaysia (USM)",
-        year: "2007 – 2010",
-        thesis: "Penang, Malaysia"
-      }
-    ],
-    talks: [
-      {
-        title: "Characterizing Stable Minimal Surface Outside a Unit Ball",
-        event: "5th Japan-Taiwan Joint Conference on Differential Geometry",
-        location: "Takamatsu, Japan",
-        date: "Nov 2025"
-      },
-      {
-        title: "Rigidity result of graphical mean curvature flow translating solution",
-        event: "UCSB Differential Geometry Seminar",
-        location: "UCSB (Online)",
-        date: "Feb 2024"
-      },
-      {
-        title: "Geometry and Symmetric Spaces Seminar",
-        event: "2023 OCAMI-RIRCM International Workshop",
-        location: "Osaka Metropolitan University, Japan",
-        date: "Feb 2023"
-      },
-      {
-        title: "Rigidity and Stability Results for Soliton Solutions in MCF",
-        event: "PNU BRL Geometry Seminar Series",
-        location: "Pusan National University, Korea",
-        date: "2021–2022"
-      }
-    ]
-  },
+  // Misc Links Section
+  miscLinks: [
+    { name: "My CV (PDF)", url: "cv.pdf", isPdf: true },
+    { name: "My Mathematics Genealogy", url: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=283494", isPdf: false },
+    { name: "My arXiv Search", url: "https://arxiv.org/search/?query=Ooi%2C+Yuan+Shyong&searchtype=author", isPdf: false },
+    { name: "Google Scholar Profile", url: "https://scholar.google.com.tw/citations?user=v3hHG8gAAAAJ&hl=zh-CN", isPdf: false },
+    { name: "MathCha (Mathematical Plotting Tool)", url: "https://www.mathcha.io", isPdf: false },
+    { name: "3D Tetris Game (Designed by me)", url: "https://yuanshyong.github.io/3d-tetris/", isPdf: false },
+    { name: "Board Game Arena Profile", url: "https://boardgamearena.com/player?id=92004757", isPdf: false }
+  ],
 
   // Contact Info
   contact: {
-    text: "Feel free to reach out via email for research discussions, preprints, or potential academic collaborations.",
-    email: "shyong224@gmail.com",
-    office: "Department of Applied Mathematics, National University of Tainan",
+    affiliation: "Department of Applied Mathematics, National University of Tainan (NUTN)",
+    primaryEmail: "yuanshyong@mail.nutn.edu.tw",
+    permanentEmail: "shyong224@gmail.com",
     address: "No. 33, Sec. 2, Shu-Lin St., West Central District, Tainan City 70005, Taiwan"
   }
 };
