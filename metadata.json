@@ -1,6 +1,0 @@
-{
-  "name": "Yuan Shyong Ooi - Academic Website",
-  "description": "Personal academic website for Dr. Yuan Shyong Ooi featuring modular research and teaching configs, and interactive background physics simulation.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
