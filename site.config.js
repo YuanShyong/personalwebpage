@@ -24,12 +24,12 @@ const siteConfig = {
   },
 
   home: {
-    tagline: "Assistant Professor in Differential Geometry & Geometric Analysis at National University of Tainan.",
+    tagline: "Assistant Professor in Department of Applied Mathematic at National University of Tainan.",
     announcement: {
       enabled: true,
       badge: "NEW POSITION STARTING FALL 2026",
       title: "Assistant Professor at National University of Tainan (NUTN)",
-      description: "Dr. Yuan Shyong Ooi will be joining the Department of Applied Mathematics at National University of Tainan (國立臺南大學) starting Fall 2026.",
+      description: "I will be joining the Department of Applied Mathematics at National University of Tainan (國立臺南大學) starting Fall 2026.",
       date: "Fall 2026",
       icon: "fa-solid fa-bullhorn",
       link: ""
@@ -47,7 +47,7 @@ const siteConfig = {
     affiliation: "Department of Applied Mathematics, National University of Tainan (NUTN)",
     primaryEmail: "yuanshyong@mail.nutn.edu.tw",
     permanentEmail: "shyong224@gmail.com",
-    address: "No. 33, Sec. 2, Shu-Lin St., West Central District, Tainan City 70005, Taiwan"
+    address: "700臺南市中西區五妃里樹林街二段33號格致號樓C113｜No. 33, Sec. 2, Shu-Lin St., West Central District, Tainan City 70005, Taiwan"
   },
 
   miscLinks: [
