@@ -5,7 +5,7 @@
 // =========================================================================
 
 const researchConfig = {
-  researchStatement: "My research centers on Differential Geometry and Geometric Analysis, with an emphasis on minimal submanifolds, mean curvature flow (MCF), self-similar soliton solutions (such as translating solitons and λ-translators), higher codimension geometric systems, and Dirichlet boundary problems for minimal graphs.",
+  researchStatement: "My research centers on Differential Geometry and Geometric Analysis, with an emphasis on minimal submanifolds, mean curvature flow (MCF), self-similar soliton solutions (such as translating solitons and λ-translators), higher codimension minimal submanifold, and Dirichlet problems for minimal graphs.",
 
   // Research Themes & Categories
   researchCategories: [
@@ -29,7 +29,7 @@ const researchConfig = {
       items: [
         "Self-similar solutions of Mean Curvature Flow (MCF).",
         "Rigidity and classification of Mean Curvature Flow soliton solutions.",
-        "Stability properties and rigidity results for λ-translating hypersurfaces moving along non-graphical directions."
+        "Stability properties and rigidity results for λ-translating hypersurfaces."
       ]
     },
     {
@@ -154,11 +154,11 @@ const researchConfig = {
 
   // Collaborators
   collaborators: [
-    { name: "Yng-Ing Lee (李瑩英)", institution: "National Taiwan University", url: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=39253" },
+    { name: "Yng-Ing Lee (李瑩英)", institution: "National Taiwan University", url: "https://www.math.ntu.edu.tw/entity_people/entity_people/21459" },
     { name: "Juncheol Pyo", institution: "Pusan National University", url: "https://scholar.google.com/citations?user=RrX0fsEAAAAJ&hl=ko" },
-    { name: "John Ma Man Shun", institution: "The University of Hong Kong", url: "https://sites.google.com/view/john-man-shun-ma/home" },
+    { name: "John Ma Man Shun（馬文信）", institution: "The University of Hong Kong", url: "https://sites.google.com/view/john-man-shun-ma/home" },
     { name: "Jihyeon Lee", institution: "Korea Institute for Advanced Study", url: "https://sites.google.com/view/jihyeonlee/home" },
-    { name: "Mao-Pei Tsui (崔茂培)", institution: "National Taiwan University", url: "https://www.math.ntu.edu.tw/~mptsui/" }
+    { name: "Mao-Pei Tsui (崔茂培)", institution: "National Taiwan University", url: "https://www.math.ntu.edu.tw/entity_people/entity_people/21506" }
   ]
 };
 
