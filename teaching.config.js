@@ -147,25 +147,25 @@ const teachingConfig = {
       id: "talk-2026-hainan",
       date: "July 2026",
       event: "Hainan University Geometry Workshop",
-      title: "Rigidity and Stability of Translating Solitons in MCF",
+      title: "Rigidity and Classification of Translating Solitons under Symmetry",
       location: "Hainan, China",
       link: "",
-      type: "upcoming"
+      type: "past"
     },
     {
       id: "talk-2026-ibs-cgp",
       date: "July 2026",
       event: "IBS-CGP Seminar",
-      title: "Uniqueness and Singularities of Minimal Submanifolds",
+      title: "Rigidity and Classification of Translating Solitons under Symmetry",
       location: "Pohang, South Korea",
       link: "https://cgp.ibs.re.kr/activities/seminars/cgp_seminar",
-      type: "upcoming"
+      type: "past"
     },
     {
       id: "talk-2026-nptu",
       date: "March 2026",
       event: "National Pingtung University Department Colloquium",
-      title: "An Introduction to Mean Curvature Flow and Soliton Solutions",
+      title: "Rigidity and Classification of Graphical Mean Curvature Flow Translators and λ-Translators",
       location: "Pingtung, Taiwan",
       link: "https://math.nptu.edu.tw/p/406-1138-193456,r964.php?Lang=zh-tw",
       type: "past"
@@ -174,7 +174,7 @@ const teachingConfig = {
       id: "talk-2026-nutn",
       date: "March 2026",
       event: "National University of Tainan Applied Math Seminar",
-      title: "Geometric Analysis of Higher Codimension Minimal Submanifolds",
+      title: "生活中的極小曲面",
       location: "Tainan, Taiwan",
       link: "https://www.nutn.edu.tw/information_details.html?boardno=103020&classid=3",
       type: "past"
@@ -183,7 +183,7 @@ const teachingConfig = {
       id: "talk-2026-ncts",
       date: "March 2026",
       event: "NCTS Differential Geometry Seminar",
-      title: "Stability of λ-Translators in Weighted Space",
+      title: "Recent Progress in Rigidity of Free Boundary Minimal Hypersurfaces",
       location: "NTU, Taipei, Taiwan",
       link: "https://ncts.ntu.edu.tw/events_1_detail.php?nid=3081",
       type: "past"
@@ -192,7 +192,7 @@ const teachingConfig = {
       id: "talk-2026-tms",
       date: "Jan 2026",
       event: "2026 TMS Annual Meeting",
-      title: "Special Session on Geometric Analysis & Nonlinear PDEs",
+      title: "Rigidity and Stability of Graphical Translators and λ-Translating Hypersurfaces",
       location: "Taiwan Mathematical Society",
       link: "https://2026tms-en.tms.org.tw/abstract/special-sessions",
       type: "past"
@@ -201,7 +201,7 @@ const teachingConfig = {
       id: "talk-2025-japan-taiwan",
       date: "Nov 2025",
       event: "The 5th Japan-Taiwan Joint Conference on Differential Geometry",
-      title: "Rigidity of Graphical Translators Moving in Non-Graphical Direction",
+      title: "Characterizing stable minimal surfaces outside a unit ball",
       location: "Tokushima, Japan",
       link: "https://www-math.st.tokushima-u.ac.jp/~yasumoto/5thJapanTaiwan20251102/",
       type: "past"
@@ -210,7 +210,6 @@ const teachingConfig = {
       id: "talk-2025-nthu",
       date: "March 2025",
       event: "NTHU Geometry Seminar",
-      title: "Minimal Submanifolds with Isolated Singularities",
       location: "National Tsing Hua University, Hsinchu",
       link: "",
       type: "past"
@@ -219,7 +218,6 @@ const teachingConfig = {
       id: "talk-2024-ncts-forum",
       date: "Aug 2024",
       event: "NCTS: Young Geometric Analysts Forum",
-      title: "Recent Advances in High Codimension Minimal Surfaces",
       location: "Taipei, Taiwan",
       link: "",
       type: "past"
@@ -228,7 +226,6 @@ const teachingConfig = {
       id: "talk-2024-taipei-postdoc",
       date: "April 2024",
       event: "Academia Sinica and NCTS: Taipei Postdoc Seminar",
-      title: "Soliton Solutions in Mean Curvature Flow",
       location: "Academia Sinica, Taipei",
       link: "",
       type: "past"
@@ -238,8 +235,8 @@ const teachingConfig = {
   // Student Office Hours
   officeHours: {
     time: "Tuesdays & Thursdays, 14:00 - 16:00 (or by email appointment)",
-    location: "Department of Applied Mathematics, NUTN Campus",
-    notes: "Students in Calculus or Differential Geometry are welcome to drop by for questions or problem sets!"
+    location: "C209-3, Department of Applied Mathematics, NUTN",
+    notes: "Students are welcome to drop by for questions or problem sets!"
   },
 
   // Student Resources & Fun Links
@@ -250,18 +247,6 @@ const teachingConfig = {
       url: "https://www.mathcha.io",
       icon: "fa-solid fa-chart-line"
     },
-    {
-      title: "3D Tetris Game (Created by Dr. Ooi)",
-      description: "A fun spatial-reasoning geometry game built in HTML5/WebGL.",
-      url: "https://yuanshyong.github.io/3d-tetris/",
-      icon: "fa-solid fa-cubes"
-    },
-    {
-      title: "Board Game Arena",
-      description: "Strategy board games platform - great for logical strategy exercise!",
-      url: "https://boardgamearena.com/player?id=92004757",
-      icon: "fa-solid fa-chess"
-    }
   ]
 };
 
