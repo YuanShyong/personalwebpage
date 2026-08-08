@@ -150,7 +150,7 @@ export const researchConfig: ResearchConfigData = {
     { name: "Juncheol Pyo", institution: "Pusan National University", url: "https://scholar.google.com/citations?user=RrX0fsEAAAAJ&hl=ko" },
     { name: "John Ma Man Shun", institution: "The University of Hong Kong", url: "https://sites.google.com/view/john-man-shun-ma/home" },
     { name: "Jihyeon Lee", institution: "Korea Institute for Advanced Study", url: "https://sites.google.com/view/jihyeonlee/home" },
-    { name: "Mao-Pei Tsui (崔茂培)", institution: "National Taiwan University", url: "https://www.math.ntu.edu.tw/~mptsui/" }
+    { name: "Mao-Pei Tsui (崔茂培)", institution: "National Taiwan University", url: "https://www.math.ntu.edu.tw/entity_people/entity_people/21506" }
   ]
 };
 
