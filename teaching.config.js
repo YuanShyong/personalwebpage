@@ -130,6 +130,9 @@ const teachingConfig = {
           semester: "Fall 2024",
           level: "Undergraduate",
           institution: "NTU",
+          time: "",
+          location: "",
+          officeHours: "",
           description: "Single variable calculus",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         },
@@ -140,6 +143,9 @@ const teachingConfig = {
           semester: "Spring 2025",
           level: "Undergraduate",
           institution: "NTU",
+          time: "",
+          location: "",
+          officeHours: "",
           description: "Multivariable Calculus and Vector Calculus",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         }
