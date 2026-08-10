@@ -121,7 +121,7 @@ const teachingConfig = {
       institution: "National Taiwan University (NTU)",
       role: "Instructor (2024 - 2025)",
       years: "2024 - 2025",
-      courses: "Calculus 1 & 2, Multivariable Calculus, Vector Calculus.",
+      courses: "Calculus 1 & 2 (Single variable calculus), Calculus 3 & 4 (Multivariable calculus and Vector calculus)",
       courseList: [
         {
           id: "cal-12-ntu",
@@ -130,9 +130,9 @@ const teachingConfig = {
           semester: "Fall 2024",
           level: "Undergraduate",
           institution: "NTU",
-          time: "",
-          location: "",
-          officeHours: "",
+          time: "NA",
+          location: "NA",
+          officeHours: "NA",
           description: "Single variable calculus",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         },
@@ -143,9 +143,9 @@ const teachingConfig = {
           semester: "Spring 2025",
           level: "Undergraduate",
           institution: "NTU",
-          time: "",
-          location: "",
-          officeHours: "",
+          time: "NA",
+          location: "NA",
+          officeHours: "NA",
           description: "Multivariable Calculus and Vector Calculus",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         }
@@ -162,6 +162,9 @@ const teachingConfig = {
           semester: "Fall 2023",
           level: "Graduate",
           institution: "PNU",
+          time: "NA",
+          location: "NA",
+          officeHours: "NA",
           description: "Hausdorff measures, rectifiable sets, varifolds, currents, and regularity theory for area-minimizing hypersurfaces.",
           textbook: "L. Simon, 'Lectures on Geometric Measure Theory'"
         }
