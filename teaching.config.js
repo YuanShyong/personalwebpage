@@ -131,9 +131,10 @@ const teachingConfig = {
           level: "Undergraduate",
           institution: "NTU",
           time: "NA",
-          location: "NA",
+          location: "NTU",
           officeHours: "NA",
           description: "Single variable calculus",
+          prerequisites: "NA",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         },
         {
@@ -144,9 +145,10 @@ const teachingConfig = {
           level: "Undergraduate",
           institution: "NTU",
           time: "NA",
-          location: "NA",
+          location: "NTU",
           officeHours: "NA",
           description: "Multivariable Calculus and Vector Calculus",
+          prerequisites: "NA",
           textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         }
       ]
@@ -163,9 +165,10 @@ const teachingConfig = {
           level: "Graduate",
           institution: "PNU",
           time: "NA",
-          location: "NA",
+          location: "PNU",
           officeHours: "NA",
           description: "Hausdorff measures, rectifiable sets, varifolds, currents, and regularity theory for area-minimizing hypersurfaces.",
+          prerequisites: "NA",
           textbook: "L. Simon, 'Lectures on Geometric Measure Theory'"
         }
       ]
