@@ -124,30 +124,24 @@ const teachingConfig = {
       courses: "Calculus 1 & 2, Multivariable Calculus, Vector Calculus.",
       courseList: [
         {
-          id: "cal-101-ntu",
-          code: "CAL 101",
-          name: "Calculus I & II",
-          semester: "2024 - 2025",
+          id: "cal-12-ntu",
+          code: "MATH4006/4007",
+          name: "Calculus 1 & 2",
+          semester: "Fall 2024",
           level: "Undergraduate",
           institution: "NTU",
-          description: "Single and multivariable differential and integral calculus for mathematics and science majors.",
-          textbook: "James Stewart, 'Calculus: Early Transcendentals'",
-          materials: [
-            { title: "NTU Calculus Lecture Outlines", link: "#", type: "notes", date: "2024" }
-          ]
+          description: "Single variable calculus",
+          textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         },
         {
-          id: "cal-202-vector-calc",
-          code: "CAL 202",
-          name: "Vector Calculus & Differential Forms",
+          id: "cal-34-ntu",
+          code: "MATH4008/4009",
+          name: "Calculus 3 & 4",
           semester: "Spring 2025",
           level: "Undergraduate",
           institution: "NTU",
-          description: "Line and surface integrals, Green's, Stokes', and Divergence theorems with introduction to differential forms.",
-          textbook: "Colley, 'Vector Calculus'",
-          materials: [
-            { title: "Vector Calculus Formula Summary", link: "#", type: "pdf", date: "Spring 2025" }
-          ]
+          description: "Multivariable Calculus and Vector Calculus",
+          textbook: "Stewart, Calculus: Early Transcendentals 9/e Metric Version"
         }
       ]
     },
@@ -163,10 +157,7 @@ const teachingConfig = {
           level: "Graduate",
           institution: "PNU",
           description: "Hausdorff measures, rectifiable sets, varifolds, currents, and regularity theory for area-minimizing hypersurfaces.",
-          textbook: "L. Simon, 'Lectures on Geometric Measure Theory'",
-          materials: [
-            { title: "GMT Seminar Lecture Notes", link: "#", type: "notes", date: "Fall 2023" }
-          ]
+          textbook: "L. Simon, 'Lectures on Geometric Measure Theory'"
         }
       ]
     }
@@ -265,7 +256,7 @@ const teachingConfig = {
 
   // Student Office Hours
   officeHours: {
-    time: "Tuesdays & Thursdays, 14:00 - 16:00 (or by email appointment)",
+    time: "Mon 13:00 - 14:50 & Tue 16:00 - 17:50",
     location: "C209-3, Department of Applied Mathematics, NUTN",
     notes: "Students are welcome to drop by for questions or problem sets!"
   },
