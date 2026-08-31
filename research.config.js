@@ -117,7 +117,7 @@ const researchConfig = {
       journal: "Journal of Geometric Analysis 29, 1211–1233",
       year: "2019",
       status: "published",
-      pdf: "papers/uniqueness_minimal_graph.pdf",
+      pdf: "uniqueness JGA 2019.pdf",
       doi: "10.1007/s12220-018-0036-7",
       arxiv: "1802.05432",
       abstract: "Proves uniqueness theorems for graphical minimal submanifolds in general codimension under suitable gradient slope conditions and spatial volume growth bounds.",
