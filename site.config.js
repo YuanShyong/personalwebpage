@@ -46,7 +46,7 @@ const siteConfig = {
     affiliation: "Department of Applied Mathematics, National University of Tainan (NUTN)",
     primaryEmail: "yuanshyong@mail.nutn.edu.tw",
     permanentEmail: "shyong224@gmail.com",
-    address: "700臺南市中西區五妃里樹林街二段33號格致號樓 C209-3 ｜ No. 33, Sec. 2, Shu-Lin St., West Central District, Tainan City 70005, Taiwan"
+    address: "700臺南市中西區五妃里樹林街二段33號格致號樓 C209-3 ｜ No. 33, Sec. 2, Shu-Lin St., West Central District, Tainan City 700301, Taiwan"
   },
 
   miscLinks: [
