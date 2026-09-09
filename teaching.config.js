@@ -34,7 +34,7 @@ const teachingConfig = {
             {
               date: "Sept 10, 2026",
               title: "Welcome to Differential Geometry!",
-              content: "Course syllabus and first homework set have been uploaded. Office hours start next week."
+              content: "陸續更新教材."
             }
           ],
           syllabus: [
@@ -44,9 +44,8 @@ const teachingConfig = {
             { week: "Week 12-16", topic: "Intrinsic Geometry & Gauss-Bonnet Theorem", description: "Geodesics, parallel transport, Theorema Egregium, and global Gauss-Bonnet formula." }
           ],
           materials: [
-            { title: "Course Syllabus (PDF)", link: "#", type: "pdf", date: "Fall 2026" },
-            { title: "Lecture Notes 01: Curves & Frenet Frame", link: "#", type: "notes", date: "Sept 2026" },
-            { title: "Homework 01 - Curves Parameterization", link: "#", type: "assignment", date: "Sept 2026" }
+            { title: "Curve Theory", link: "https://sites.google.com/view/curvetheory/home", type: "webpage", date: "Fall 2026" },
+            { title: "Lecture Notes 01: Curves & Frenet Frame", link: "#", type: "notes", date: "Sept 2026" },      
           ]
         },
         {
