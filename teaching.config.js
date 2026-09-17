@@ -44,7 +44,7 @@ const teachingConfig = {
             { week: "Week 12-16", topic: "Intrinsic Geometry & Gauss-Bonnet Theorem", description: "Geodesics, parallel transport, Theorema Egregium, and global Gauss-Bonnet formula." }
           ],
           materials: [
-            { title: "Curve Theory", link: "https://sites.google.com/view/curvetheory/home", type: "webpage", date: "Fall 2026" },
+            { title: "Curve Theory", link: "https://sites.google.com/view/curvetheory/home/geometry/curve-theory", type: "webpage", date: "Fall 2026" },
             { title: "Lecture Notes 01: Curves & Frenet Frame", link: "#", type: "notes", date: "Sept 2026" },      
           ]
         },
@@ -78,7 +78,6 @@ const teachingConfig = {
           ],
           materials: [
             { title: "Syllabus & Grading Scheme", link: "#", type: "pdf", date: "Fall 2026" },
-            { title: "Problem Set 01 (Real Analysis)", link: "#", type: "assignment", date: "Sept 2026" }
           ]
         },
         {
@@ -104,14 +103,13 @@ const teachingConfig = {
             }
           ],
           syllabus: [
-            { week: "Week 1-4", topic: "Euclidean Space & Metric Topology", description: "Open/closed sets, limit points, convergence, and completeness." },
-            { week: "Week 5-8", topic: "Compactness and Connectedness", description: "Heine-Borel theorem, continuous functions on compact sets, uniform continuity." },
-            { week: "Week 9-12", topic: "Multivariable Differentiation", description: "Total derivative, directional derivatives, Taylor series, and extrema." },
-            { week: "Week 13-16", topic: "Inverse and Implicit Function Theorems", description: "Contraction mapping principle, proofs and applications of Inverse/Implicit theorems." }
+            { week: "Week 1-4", topic: "", description: "" },
+            { week: "Week 5-8", topic: "", description: "" },
+            { week: "Week 9-12", topic: "", description: "" },
+            { week: "Week 13-16", topic: "", description: "" }
           ],
           materials: [
-            { title: "Syllabus & Grading Scheme", link: "#", type: "pdf", date: "Fall 2026" },
-            { title: "Problem Set 01 (Real Analysis)", link: "#", type: "assignment", date: "Sept 2026" }
+            { title: "線上互動學機統", link: "https://sites.google.com/view/curvetheory/home/probability", type: "webpage", date: "Fall 2026" },        
           ]
         }
       ]
