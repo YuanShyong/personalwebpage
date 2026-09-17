@@ -55,7 +55,7 @@ const siteConfig = {
     { name: "arXiv Search", url: "https://arxiv.org/search/?query=Ooi%2C+Yuan+Shyong&searchtype=author", isPdf: false },
     { name: "Google Scholar Profile", url: "https://scholar.google.com.tw/citations?user=v3hHG8gAAAAJ&hl=zh-CN", isPdf: false },
     { name: "MathCha Online Plotter", url: "https://www.mathcha.io", isPdf: false },
-    { name: "My Teaching Material", https://sites.google.com/view/curvetheory/home", isPdf: false },
+    { name: "My Teaching Material", url: "https://sites.google.com/view/curvetheory/home", isPdf: false },
     { name: "3D Tetris Web Game", url: "https://yuanshyong.github.io/3d-tetris/", isPdf: false },
     { name: "Board Game Arena Profile", url: "https://boardgamearena.com/player?id=92004757", isPdf: false }
   ]
