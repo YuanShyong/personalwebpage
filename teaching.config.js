@@ -181,7 +181,7 @@ const teachingConfig = {
       title: "TBA",
       location: "Taipei, Taiwan",
       link: "https://ncts.ntu.edu.tw/events_2_detail.php?nid=584
-      type: ""
+      type: "upcoming"
     },
     {
       id: "talk-2026-hainan",
