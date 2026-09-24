@@ -175,8 +175,17 @@ const teachingConfig = {
   // Academic Talks & Seminars
   talks: [
     {
+      id: "talk-2027-TMS",
+      date: "18-19 Jan 2027",
+      event: "Taiwan Mathematical Society Meeting",
+      title: "TBA",
+      location: "National Taiwan University, Taipei, Taiwan",
+      link: "",
+      type: "upcoming"
+    },
+    {
       id: "talk-2026-ibs-ncts",
-      date: "Nov 2026",
+      date: "9-11 Nov 2026",
       event: "NCTS-IBS CGP Joint Workshop 2026",
       title: "TBA",
       location: "Taipei, Taiwan",
