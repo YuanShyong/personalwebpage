@@ -180,7 +180,7 @@ const teachingConfig = {
       event: "NCTS-IBS CGP Joint Workshop 2026",
       title: "TBA",
       location: "Taipei, Taiwan",
-      link: "https://ncts.ntu.edu.tw/events_2_detail.php?nid=584
+      link: "https://ncts.ntu.edu.tw/events_2_detail.php?nid=584",
       type: "upcoming"
     },
     {
